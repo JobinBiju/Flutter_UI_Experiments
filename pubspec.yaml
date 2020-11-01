@@ -1,0 +1,41 @@
+name: ui_samples
+description: A new Flutter Samples application.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+  font_awesome_flutter: ^8.10.0
+  flutter_svg: ^0.19.1
+  lottie: ^0.7.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/icons/
+    - assets/lottie/
+    - assets/images/
+
+  # example:
+  fonts:
+    - family: Noto Sans JP
+      fonts:
+        - asset: assets/fonts/NotoSansJP-Regular.otf
+        - asset: assets/fonts/NotoSansJP-Medium.otf
+        - asset: assets/fonts/NotoSansJP-Bold.otf
