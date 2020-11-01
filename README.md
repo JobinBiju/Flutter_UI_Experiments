@@ -4,7 +4,7 @@ A new Flutter Sample Experiments application.
 
 ## UI Screenshots
 
-|<img src="https://raw.githubusercontent.com/JobinBiju/Flutter_UI_Experiments/main/screenshots/splashScreen.gif" width=210> | <img src="https://raw.githubusercontent.com/JobinBiju/Flutter_UI_Experiments/main/screenshots/modernDrawer.gif" width=210> | <img src="https://raw.githubusercontent.com/JobinBiju/Flutter_UI_Experiments/main/screenshots/darkToggle.gif" width=210> | 
+|<img src="https://raw.githubusercontent.com/JobinBiju/Flutter_UI_Experiments/main/screenshots/splashScreen.gif" width=220> | <img src="https://raw.githubusercontent.com/JobinBiju/Flutter_UI_Experiments/main/screenshots/modernDrawer.gif" width=220> | <img src="https://raw.githubusercontent.com/JobinBiju/Flutter_UI_Experiments/main/screenshots/darkToggle.gif" width=220> | 
 |:---:|:---:|:---:|
 
 ## Getting Started
