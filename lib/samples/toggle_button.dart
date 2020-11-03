@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+typedef MyBoolCallback(bool);
+
 class ToggleButton extends StatefulWidget {
+  final MyBoolCallback isToggleChanged;
+  ToggleButton({this.isToggleChanged});
   @override
   _ToggleButtonState createState() => _ToggleButtonState();
 }
@@ -14,6 +18,7 @@ class _ToggleButtonState extends State<ToggleButton> {
         setState(() {
           isToggled = !isToggled;
         });
+        widget.isToggleChanged(isToggled);
       },
       child: Container(
           height: 55,

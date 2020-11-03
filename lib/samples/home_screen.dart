@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return AnimatedContainer(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius),
-        color: isDark ? Color(0xff373a40) : Colors.white,
+        color: isDark ? Color(0xff1a1c20) : Colors.white,
         boxShadow: [kDefaultShadow],
       ),
       transform: Matrix4.translationValues(xOffset, yOffset, 0)
@@ -30,10 +30,10 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         children: [
           SizedBox(
-            height: 30,
+            height: 10,
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 5),
+            margin: EdgeInsets.symmetric(horizontal: 7),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             : SvgPicture.asset('assets/icons/menu.svg'),
                         onPressed: () {
                           setState(() {
-                            xOffset = 230;
+                            xOffset = 220;
                             yOffset = 110;
                             scaleFactor = 0.7;
                             isDrawerOpen = true;
@@ -78,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: Icon(
                     Icons.search,
                     color: isDark ? Colors.white : Colors.black,
-                    size: 30,
+                    size: 28,
                   ),
                   onPressed: null,
                 ),
@@ -88,7 +88,13 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 70,
           ),
-          ToggleButton(),
+          ToggleButton(
+            isToggleChanged: (value) {
+              setState(() {
+                isDark = value;
+              });
+            },
+          ),
         ],
       ),
     );

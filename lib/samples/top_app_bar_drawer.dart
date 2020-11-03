@@ -9,14 +9,16 @@ class TopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        key: _scaffoldKey,
-        backgroundColor: kBackgroundColor,
-        body: Stack(
-          children: [
-            DrawerScreen(),
-            HomeScreen(),
-          ],
-        ));
+    return SafeArea(
+      child: Scaffold(
+          key: _scaffoldKey,
+          backgroundColor: kBackgroundColor,
+          body: Stack(
+            children: [
+              DrawerScreen(),
+              HomeScreen(),
+            ],
+          )),
+    );
   }
 }

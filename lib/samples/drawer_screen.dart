@@ -16,7 +16,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
       child: Column(
         children: [
           SizedBox(
-            height: 60,
+            height: 30,
           ),
           Row(
             children: [
