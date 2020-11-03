@@ -21,24 +21,24 @@ class _ToggleButtonState extends State<ToggleButton> {
         widget.isToggleChanged(isToggled);
       },
       child: Container(
-          height: 55,
-          width: 130,
+          height: 55 * 80 / 100,
+          width: 130 * 80 / 100,
           decoration: BoxDecoration(
             color: Colors.blue,
-            borderRadius: BorderRadius.circular(100),
+            borderRadius: BorderRadius.circular(100 * 80 / 100),
           ),
           child: Stack(
             children: [
               AnimatedCrossFade(
                 firstChild: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
+                  borderRadius: BorderRadius.circular(100 * 80 / 100),
                   child: Image(
                     image: AssetImage('assets/images/day.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
                 secondChild: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
+                  borderRadius: BorderRadius.circular(100 * 80 / 100),
                   child: Image(
                     image: AssetImage('assets/images/night.png'),
                     fit: BoxFit.cover,
@@ -61,8 +61,8 @@ class _ToggleButtonState extends State<ToggleButton> {
                   margin: EdgeInsets.symmetric(
                     horizontal: 5,
                   ),
-                  height: 45,
-                  width: 45,
+                  height: 45 * 80 / 100,
+                  width: 45 * 80 / 100,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.white,

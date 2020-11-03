@@ -16,6 +16,7 @@ dependencies:
   font_awesome_flutter: ^8.10.0
   flutter_svg: ^0.19.1
   lottie: ^0.7.0+1
+  google_fonts: ^1.1.1
 
 dev_dependencies:
   flutter_test:

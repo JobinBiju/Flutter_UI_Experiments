@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return AnimatedContainer(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius),
-        color: isDark ? Color(0xff1a1c20) : Colors.white,
+        color: isDark ? Color(0xff1a1a2e) : Colors.white,
         boxShadow: [kDefaultShadow],
       ),
       transform: Matrix4.translationValues(xOffset, yOffset, 0)
@@ -59,13 +59,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             : SvgPicture.asset('assets/icons/menu.svg'),
                         onPressed: () {
                           setState(() {
-                            xOffset = 220;
-                            yOffset = 110;
-                            scaleFactor = 0.7;
+                            xOffset = 230;
+                            yOffset = 70;
+                            scaleFactor = 0.78;
                             isDrawerOpen = true;
                             borderRadius = 20;
                           });
-                        }),
+                        },
+                      ),
                 Text(
                   'Title101',
                   style: TextStyle(
@@ -86,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           SizedBox(
-            height: 70,
+            height: 50,
           ),
           ToggleButton(
             isToggleChanged: (value) {
@@ -95,6 +96,41 @@ class _HomeScreenState extends State<HomeScreen> {
               });
             },
           ),
+          SizedBox(
+            height: 100,
+          ),
+          Container(
+            decoration: BoxDecoration(
+                color: isDark ? Color(0xff16213e) : Colors.white,
+                boxShadow: [kContainerShadow],
+                borderRadius: BorderRadius.circular(15)),
+            margin: EdgeInsets.symmetric(horizontal: 15),
+            padding: EdgeInsets.all(15),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Lorem Ipsum',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: isDark ? Colors.white : Colors.black,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.',
+                  style: TextStyle(
+                    color: isDark ? Colors.white : Colors.black,
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.justify,
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
