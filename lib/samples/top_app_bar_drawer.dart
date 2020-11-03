@@ -12,26 +12,6 @@ class TopBar extends StatelessWidget {
     return Scaffold(
         key: _scaffoldKey,
         backgroundColor: kBackgroundColor,
-        // appBar: AppBar(
-        //   backgroundColor: Colors.transparent,
-        //   elevation: 0,
-        //   leading: IconButton(
-        //     icon: SvgPicture.asset('assets/icons/menu.svg'),
-        //     onPressed: () => _scaffoldKey.currentState.openDrawer(),
-        //   ),
-        //   actions: [
-        //     Padding(
-        //       padding: EdgeInsets.only(right: 8.0),
-        //       child: IconButton(
-        //         icon: Icon(
-        //           Icons.search,
-        //           color: Colors.black,
-        //         ),
-        //         onPressed: null,
-        //       ),
-        //     ),
-        //   ],
-        // ),
         body: Stack(
           children: [
             DrawerScreen(),

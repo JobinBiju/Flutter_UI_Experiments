@@ -14,13 +14,14 @@ class _HomeScreenState extends State<HomeScreen> {
   double scaleFactor = 1;
   bool isDrawerOpen = false;
   double borderRadius = 0;
+  bool isDark = false;
 
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius),
-        color: Colors.white,
+        color: isDark ? Color(0xff373a40) : Colors.white,
         boxShadow: [kDefaultShadow],
       ),
       transform: Matrix4.translationValues(xOffset, yOffset, 0)
@@ -38,7 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 isDrawerOpen
                     ? IconButton(
-                        icon: Icon(Icons.arrow_back_ios),
+                        icon: Icon(
+                          Icons.arrow_back_ios,
+                          color: isDark ? Colors.white : Colors.black,
+                        ),
                         onPressed: () {
                           setState(() {
                             xOffset = 0;
@@ -50,7 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                       )
                     : IconButton(
-                        icon: SvgPicture.asset('assets/icons/menu.svg'),
+                        icon: isDark
+                            ? SvgPicture.asset('assets/icons/menu_dark.svg')
+                            : SvgPicture.asset('assets/icons/menu.svg'),
                         onPressed: () {
                           setState(() {
                             xOffset = 230;
@@ -64,14 +70,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   'Title101',
                   style: TextStyle(
                     fontSize: 20,
-                    color: Colors.black,
+                    color: isDark ? Colors.white : Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 IconButton(
                   icon: Icon(
                     Icons.search,
-                    color: Colors.black,
+                    color: isDark ? Colors.white : Colors.black,
                     size: 30,
                   ),
                   onPressed: null,
